@@ -1,0 +1,24 @@
+1.List all of the Star Trek movies, include the id, title and yr (all of these movies include the words Star Trek in the title). Order results by year.
+
+SELECT id,title,yr
+FROM movie
+WHERE title LIKE '%star trek%'
+ORDER BY yr
+
+2.Obtain the cast list for the film 'Alien'
+
+SELECT name
+FROM actor JOIN casting ON id=actorid
+WHERE movieid=10522
+
+3.List the films in which 'Harrison Ford' has appeared
+
+SELECT title
+FROM movie JOIN casting ON id=movieid
+WHERE actorid=(SELECT id FROM actor WHERE name= 'Harrison Ford')
+
+4.List the films together with the leading star for all 1962 films.
+
+SELECT title,name
+FROM (actor JOIN casting ON id=actorid)JOIN movie ON movie.id=movieid
+WHERE yr=1962 AND ord=1

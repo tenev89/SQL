@@ -22,3 +22,20 @@ WHERE actorid=(SELECT id FROM actor WHERE name= 'Harrison Ford')
 SELECT title,name
 FROM (actor JOIN casting ON id=actorid)JOIN movie ON movie.id=movieid
 WHERE yr=1962 AND ord=1
+
+5.List the teachers who have NULL for their department.
+
+SELECT name
+FROM teacher
+WHERE dept IS NULL
+
+6.Use a different JOIN so that all teachers are listed.
+
+SELECT teacher.name,dept.name
+FROM teacher LEFT JOIN dept ON teacher.dept=dept.id
+
+7.Use COUNT and GROUP BY dept.name to show each department and the number of staff. Use a RIGHT JOIN to ensure that the Engineering department is listed.
+
+SELECT dept.name,COUNT(teacher.name)
+FROM teacher RIGHT JOIN dept ON teacher.dept=dept.id
+GROUP BY dept.name

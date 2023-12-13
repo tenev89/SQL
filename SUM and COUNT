@@ -1,0 +1,18 @@
+1. For each continent show the continent and number of countries with populations of at least 10 million.
+
+SELECT continent,COUNT(name)
+FROM world
+WHERE population>10000000
+GROUP BY continent
+
+2.What is the total population of ('Estonia', 'Latvia', 'Lithuania')
+
+SELECT SUM(population)
+FROM world
+WHERE name IN ('Estonia', 'Latvia', 'Lithuania')
+
+3. Give the total GDP of Africa
+
+SELECT SUM(gdp)
+FROM world
+WHERE continent = 'Africa'

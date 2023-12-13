@@ -1,0 +1,17 @@
+1.Show the countries in Europe with a per capita GDP greater than 'United Kingdom'.
+
+SELECT name
+FROM world
+WHERE continent='Europe' AND gdp/population>(SELECT gdp/population FROM world WHERE name='United Kingdom')
+
+2.Which countries have a GDP greater than every country in Europe? [Give the name only.] (Some countries may have NULL gdp values)
+
+SELECT name
+FROM world
+WHERE gdp>ALL(SELECT gdp FROM world WHERE continent='Europe')
+
+3.List each country name where the population is larger than that of 'Russia'.
+
+SELECT name
+FROM world
+WHERE population>(SELECT population FROM world WHERE name='Russia'

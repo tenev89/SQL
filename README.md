@@ -1,12 +1,12 @@
-SQL EXERCISES SHOWCASE
+# SQL Exercises showcase
 
 The repository contains a collection of SQL exercises aimed at demonstrating my knowledge and proficiency in SQL.
 
-ABOUT
+## About
 
 This repository serves as a showcase of my SQL skills. It includes a series of SQL exercises covering various aspects of database querying. Each exercise is designed to test different SQL concepts and techniques.
 
-EXERCISES
+## Exercises
 
 Exercise 1: Join Statements
 

@@ -10,7 +10,7 @@ This repository serves as a showcase of my SQL skills. It includes a series of S
 
 ### Exercise 1: Join Statements
 
-Description: Practice using join statements to combine data from multiple tables based on common columns.
+Description: Practice using join statements to combine data from multiple tables based on common columns
 
 
 ### Exercise 2: Select Within Select
